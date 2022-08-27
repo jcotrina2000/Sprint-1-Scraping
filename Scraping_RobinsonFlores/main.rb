@@ -5,11 +5,12 @@ require 'nokogiri' #formatear, parsear a html
 require 'csv' #escribir y leer csv
 require_relative 'trabajo'
 CSV.open('jobs_opcionempleo.csv','wb', col_sep: ';') do |csv|
-    csv << %w[Cargo Ciudad Empresa Fecha_publicacion]
+    csv << %w[Cargo Ciudad Empresa Fecha_publicacion Jornada Horario]
 end
 #para busqueda como desarrolador
 link ='https://www.opcionempleo.ec/empleo-desarrollador.html'
 cabeceraLink ='https://www.opcionempleo.ec/empleo-desarrollador.html'
+cabeceraLinkJob = 'https://www.opcionempleo.ec'
 nPagText = '?p='#parsed_content.css('.more').css('a').attr('href')
 npag = 2 
 
@@ -24,7 +25,13 @@ while (npag<=12)
     ciudad = job.css('.location').css('li').inner_text.split(",", 2)[0].strip
     empresa = job.css('.company').inner_text.strip
     fechaPublicacion = job.css('.badge').inner_text.strip
-    trabajo = Trabajo.new(cargo, ciudad, empresa, fechaPublicacion)
+    jobLink =  job.css('a').attr('href').inner_text.strip
+    datosHTML2 = URI.open(cabeceraLinkJob+jobLink,'User-Agent' => 'firefox')
+    datosStr2 = datosHTML2.read
+    parsed_content2 = Nokogiri::HTML(datosStr2)
+    jornada  = parsed_content2.css('.container').css('.details').css('li:nth-child(2)').inner_text.strip
+    horario  = parsed_content2.css('.container').css('.details').css('li:nth-child(3)').inner_text.strip
+    trabajo = Trabajo.new(cargo, ciudad, empresa, fechaPublicacion, jornada, horario)
     trabajo.guardar
   end
   nPagText = '?p='+npag.to_s
@@ -50,15 +57,19 @@ while (npag<=4)
     ciudad = job.css('.location').css('li').inner_text.split(",", 2)[0].strip
     empresa = job.css('.company').inner_text.strip
     fechaPublicacion = job.css('.badge').inner_text.strip
-    trabajo = Trabajo.new(cargo, ciudad, empresa, fechaPublicacion)
+    jobLink =  job.css('a').attr('href').inner_text.strip
+    datosHTML2 = URI.open(cabeceraLinkJob+jobLink,'User-Agent' => 'firefox')
+    datosStr2 = datosHTML2.read
+    parsed_content2 = Nokogiri::HTML(datosStr2)
+    jornada  = parsed_content2.css('.container').css('.details').css('li:nth-child(2)').inner_text.strip
+    horario  = parsed_content2.css('.container').css('.details').css('li:nth-child(3)').inner_text.strip
+    trabajo = Trabajo.new(cargo, ciudad, empresa, fechaPublicacion, jornada, horario)
     trabajo.guardar
   end
   nPagText = '?p='+npag.to_s
   link = cabeceraLink+nPagText
   puts link
-  npag+=1
-  
-  
+  npag+=1 
 end 
 
  
