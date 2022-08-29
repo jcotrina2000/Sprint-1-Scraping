@@ -1,52 +1,71 @@
 require 'open-uri' #consultar a la plataforma
 require 'nokogiri' #formatear, parsear a html
 
-$link = 'https://ec.indeed.com/jobs?q=engineer%20software&l=Ecuador&vjk=74e9c3033648168c'
-$datosHTML = URI.open($link)
+
+$link = 'https://ec.expertini.com/jobs/search/developer/'
+$datosHTML = URI.open($link)    
 $datosStr = $datosHTML.read
 $parsed_content = Nokogiri::HTML($datosStr)
+$contadorpag = 0
 
-var = 10
+def contadorpagina()
+  contenido2 = $parsed_content.css('.w-pagination')
+  contenido2.css(".page-numbers").each do |element|
+    $contadorpag+=1
+  end
+  $contadorpag = $contadorpag-2 #se le resta 2 dado que cuenta tambien los botones de siguiente y anterior
+end
 
 
+contadorpagina()
 
-def scrap1()
-    contenido = $parsed_content.css('.cardOutline')
-    contenido.css(".cardOutline").each do |element|  
-        titulo = element.css('.jobTitle').css('.css-jspxzf').inner_text()
-        lugar = element.css('.companyLocation').inner_text()
-        dia =  element.css('.date').inner_text()
-        exper = element.css('.jobsearch').inner_text()
 
-        if titulo.include?("/")
-            puts "TITULO -->"+titulo.split("/")[0]  #id  .clase
-        else
-            puts "TITULO -->"+ titulo
-        end
-        puts "LUGAR-->"+lugar.split(",")[0]
-        puts "DIAS-->"+dia.split(" ")[1]
-        puts "\n"
-          
+def scrapeo()
+
+contenido = $parsed_content.css('.row') 
+contenido.css(".grid-content").css(".job-info").each do |element|
+    titulo = element.css(".job-title").inner_text()
+    empresa = element.css(".info-company").css(".company").inner_text().strip()
+    categoria = element.css(".info-company").css(".category").inner_text().strip()
+    direccion = element.css(".info-company").css(".address").inner_text().strip()
+  
+    tiempo = element.css(".info-company").css(".job-type").inner_text().strip()
+  
+    #strip() usado para eliminar los espacioes en blanco iniciales y finales
+    puts "TITULO=>" + titulo
+    puts "EMPRESA=>" + empresa
+    puts "CATEGORIA=>" + categoria
+    puts "DIRECCION=>" + direccion
+    #puts "TIEMPO=>" + tiempo
+    puts ""
     end
-
-    
-def avanzar(number)
-    $link = "/jobs?q=software&l=Ecuador&start="+number.to_s
-    puts $link
-    $datosHTML = URI.open($link)
-    $datosStr = $datosHTML.read
-    $parsed_content = Nokogiri::HTML($datosStr)
-    
-    scrap1()
 end
 
 
-    
+
+
+
+def siguiente(number)
+  $link = "https://ec.expertini.com/jobs/search/developer/?No="+number.to_s
+  $datosHTML = URI.open($link)
+  $datosStr = $datosHTML.read
+  $parsed_content = Nokogiri::HTML($datosStr)   
+  scrapeo()
+  
 end
 
-i = 0
-while i < 100
-    scrap1()
-    i += 10
-    
- end
+for i in 1..$contadorpag
+  siguiente(i)
+  puts i
+end
+#
+
+
+
+
+
+
+
+
+
+
