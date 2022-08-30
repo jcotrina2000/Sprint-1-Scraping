@@ -4,6 +4,7 @@ require 'open-uri' #consultar a la plataforma
 require 'nokogiri' #formatear, parsear a html
 require 'csv' #escribir y leer csv
 require_relative 'trabajo'
+
 CSV.open('jobs_opcionempleo.csv','wb', col_sep: ';') do |csv|
     csv << %w[Cargo Ciudad Empresa Fecha_publicacion Permanencia Horario]
 end

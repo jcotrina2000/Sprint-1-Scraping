@@ -1,71 +1,34 @@
-require 'open-uri' #consultar a la plataforma
-require 'nokogiri' #formatear, parsear a html
+require 'open-uri' # consultar a la plataforma
+require 'nokogiri' # formatear, parsear a html
+require 'csv'
+require 'date'
 
-
-$link = 'https://ec.expertini.com/jobs/search/developer/'
-$datosHTML = URI.open($link)    
-$datosStr = $datosHTML.read
-$parsed_content = Nokogiri::HTML($datosStr)
-$contadorpag = 0
-
-def contadorpagina()
-  contenido2 = $parsed_content.css('.w-pagination')
-  contenido2.css(".page-numbers").each do |element|
-    $contadorpag+=1
-  end
-  $contadorpag = $contadorpag-2 #se le resta 2 dado que cuenta tambien los botones de siguiente y anterior
+# require './prueba'
+#require './ScrapingExpertini' 
+#require './job'
+ require_relative 'ScrapingExpertini'
+ require_relative 'job'
+# require_relative 'prueba'
+# load './ScrapingExpertini.rb' load './job.rb'
+CSV.open('jobs_expertini.csv','wb', col_sep: ';') do |csv|
+  csv << %w[titulo empresa categoria provincia salario tipo dias]
 end
+link = 'https://ec.expertini.com/jobs/search/developer-ecuador/'
+datosHTML = URI.open(link)
+datosStr = datosHTML.read
+parsed_content = Nokogiri::HTML(datosStr)
+contadorpag = 0
+contenido2 = parsed_content.css('.w-pagination')
 
+contenido2.css('.page-numbers').each do |_element|
+  contadorpag += 1
+end
+contadorpag -= 2 # se le resta 2 dado que cuenta tambien los botones de siguiente y anterior
 
-contadorpagina()
-
-
-def scrapeo()
-
-contenido = $parsed_content.css('.row') 
-contenido.css(".grid-content").css(".job-info").each do |element|
-    titulo = element.css(".job-title").inner_text()
-    empresa = element.css(".info-company").css(".company").inner_text().strip()
-    categoria = element.css(".info-company").css(".category").inner_text().strip()
-    direccion = element.css(".info-company").css(".address").inner_text().strip()
+(1..10).each do |i| #(1..contadorpag).each do |i| por alguna razon a partir de la pestaña 11 comienzan a salir cargos que no tienen 
+                    #relacion con developers por ello se tuvo que hacerlo de esta forma
+  link = 'https://ec.expertini.com/jobs/search/developer-ecuador/?No=' + i.to_s
   
-    tiempo = element.css(".info-company").css(".job-type").inner_text().strip()
-  
-    #strip() usado para eliminar los espacioes en blanco iniciales y finales
-    puts "TITULO=>" + titulo
-    puts "EMPRESA=>" + empresa
-    puts "CATEGORIA=>" + categoria
-    puts "DIRECCION=>" + direccion
-    #puts "TIEMPO=>" + tiempo
-    puts ""
-    end
+  objprub = ScrapingExpertini.new
+  objprub.extraerDatosEtiquetas(link)
 end
-
-
-
-
-
-def siguiente(number)
-  $link = "https://ec.expertini.com/jobs/search/developer/?No="+number.to_s
-  $datosHTML = URI.open($link)
-  $datosStr = $datosHTML.read
-  $parsed_content = Nokogiri::HTML($datosStr)   
-  scrapeo()
-  
-end
-
-for i in 1..$contadorpag
-  siguiente(i)
-  puts i
-end
-#
-
-
-
-
-
-
-
-
-
-
