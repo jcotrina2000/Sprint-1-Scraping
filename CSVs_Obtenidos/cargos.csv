@@ -1,106 +1,78 @@
-nombre_cargo,|ciudad,|años_experiencia,|requisitos
-Work From Home Kafka Developer|Quito|3|Tecnología de la información, Spark, Big Data, Lean, Agile
-Work From Home Kafka Developer|Guayaquil|3|Tecnología de la información, Spark, Big Data, Lean, Agile
-Work From Home Game Developer|Guayaquil|5|C, C++, Java, Tecnología de la información, Lean, Agile
-Work From Home Odoo Developer|Quito|5|Linux, UNIX, Windows, PostgreSQL, Python, Tecnología de la información, Lean, Agile
-Work From Home Hyperledger Fabric Developer|Guayaquil|5|C, C++, Java, Tecnología de la información, Lean, Agile
-Work From Home Odoo Developer|Guayaquil|5|Linux, UNIX, Windows, PostgreSQL, Python, Tecnología de la información, Lean, Agile
-Work From Home Hyperledger Fabric Developer|Quito|5|C, C++, Java, Tecnología de la información, Lean, Agile
-Work From Home Game Developer|Quito|5|C, C++, Java, Tecnología de la información, Lean, Agile
-Web Developer Jr.|Manta|1|PHP, Python, Servidores Web, Backbone.js, Go, HTML 5
-Developer Backend|Samborondón|2|Python
-Senior developer|Guayaquil|4|SQL Server, ASP.Net, Docker
-Programador|Guayaquil|3|No especificado
-Full stack developer|Quito|2|SQL Server, C#, Dot Net, JavaScript, AngularJS, ASP.NET MVC Web API
-Remote Java Developer|Tulcán|3|No especificado
-Desarrollador|Guayaquil|2|SQL Server, C#, Java, AngularJS
-Work From Home Node Developer|Guayaquil|5|Tecnología de la información, Node.js, Backbone.js, Lean, Agile
+cargo|ciudad|años_experiencia|requisitos
 Work From Home Node Developer|Quito|5|Tecnología de la información, Node.js, Backbone.js, Lean, Agile
+Work From Home Node Developer|Guayaquil|5|Tecnología de la información, Node.js, Backbone.js, Lean, Agile
+Junior/MidLevel Node Developer|Guayaquil|2|Tecnología de la información, Node.js, Lean, Agile
+Junior/MidLevel Node Developer|Quito|2|Tecnología de la información, Node.js, Lean, Agile
+Node Backend Developer|Guayaquil|4|Tecnología de la información, Node.js, Lean, Agile
+Node Backend Developer|Quito|4|Tecnología de la información, Node.js, Lean, Agile
+Trabajo desde casa Desarrollador Node Backend|Guayaquil|4|Tecnología de la información, Node.js, Lean, Agile
+Trabajo desde casa Desarrollador Node Backend|Quito|4|Tecnología de la información, Node.js, Lean, Agile
 Work From Home React Developer|Quito|5|JavaScript, Tecnología de la información, Backbone.js, AngularJS, Lean, Agile, HTML 5
 Work From Home React Developer|Guayaquil|5|JavaScript, Tecnología de la información, Backbone.js, AngularJS, Lean, Agile, HTML 5
-Work From Home Android Developer|Quito|5|Tecnología de la información, Lean, Agile
-Work From Home Android Developer|Guayaquil|5|Tecnología de la información, Lean, Agile
-Work From Home Frontend Developer|Guayaquil|5|CSS, JavaScript, Tecnología de la información, Node.js, Backbone.js, AngularJS, Lean, Agile
-Work From Home Frontend Developer|Quito|5|CSS, JavaScript, Tecnología de la información, Node.js, Backbone.js, AngularJS, Lean, Agile
-Java developer|Quito|3|No especificado
-Work From Home .NET Core Developer|Quito|5|SQL Server, C#, CSS, Dot Net, HTML, JavaScript, Tecnología de la información, ASP.NET MVC, Lean, Agile
-Work From Home Flutter Developer|Quito|5|Dot Net, Java, Tecnología de la información, Node.js, SWIFT, Objective-C, Lean, Agile
+Work From Home Junior/MidLevel React Developer|Quito|2|CSS, JavaScript, Tecnología de la información, AngularJS, Lean, Agile, HTML 5
+Work From Home Junior/MidLevel React Developer|Guayaquil|2|CSS, JavaScript, Tecnología de la información, AngularJS, Lean, Agile, HTML 5
+Work From Home React Frontend Developer|Guayaquil|4|CSS, JavaScript, Tecnología de la información, AngularJS, Lean, Agile, HTML 5
+Work From Home React Frontend Developer|Quito|4|CSS, JavaScript, Tecnología de la información, AngularJS, Lean, Agile, HTML 5
+Trabajo desde casa Desarrollador React Frontend|Quito|4|CSS, JavaScript, Tecnología de la información, AngularJS, Lean, Agile, HTML 5
+Trabajo desde casa Desarrollador React Frontend|Guayaquil|4|CSS, JavaScript, Tecnología de la información, AngularJS, Lean, Agile, HTML 5
+Work From Home Java Developer|Guayaquil|5|Java, Tecnología de la información, Lean, Agile
+Work From Home Java Developer|Quito|5|Java, Tecnología de la información, Lean, Agile
+Work From Home Junior/MidLevel Java Developer|Guayaquil|2|Java, Tecnología de la información, Lean, Agile
+Work From Home Junior/MidLevel Java Developer|Quito|2|Java, Tecnología de la información, Lean, Agile
+Work From Home Java Backend Developer|Quito|4|Java, Tecnología de la información, Lean, Agile
+Work From Home Java Backend Developer|Guayaquil|4|Java, Tecnología de la información, Lean, Agile
+Trabajo desde casa Desarrollador Java Backend|Guayaquil|4|Java, Tecnología de la información, Lean, Agile
+Trabajo desde casa Desarrollador Java Backend|Quito|4|Java, Tecnología de la información, Lean, Agile
+Work From Home Python Developer|Quito|5|Oracle, Python, Tecnología de la información, Django, Lean, Agile, MySql
+Work From Home Python Developer|Guayaquil|5|Oracle, Python, Tecnología de la información, Django, Lean, Agile, MySql
+Work From Home .NET Developer|Guayaquil|5|SQL Server, C#, CSS, HTML, JavaScript, Tecnología de la información, Lean, Agile
+Work From Home .NET Developer|Quito|5|SQL Server, C#, CSS, HTML, JavaScript, Tecnología de la información, Lean, Agile
+Work From Home Junior/MidLevel .NET Developer / R + D|Guayaquil|2|SQL Server, C#, CSS, Dot Net, HTML, JavaScript, Tecnología de la información, ASP.NET MVC, Lean, Agile
+Work From Home Junior/MidLevel .NET Developer / R + D|Quito|2|SQL Server, C#, CSS, Dot Net, HTML, JavaScript, Tecnología de la información, ASP.NET MVC, Lean, Agile
+Trabajo desde casa Desarrollador Backend .NET / Investigación y Desarrollo|Guayaquil|5|SQL Server, C#, CSS, Dot Net, HTML, JavaScript, Tecnología de la información, ASP.NET MVC, Lean, Agile
+Trabajo desde casa Desarrollador Backend .NET / Investigación y Desarrollo|Quito|5|SQL Server, C#, CSS, Dot Net, HTML, JavaScript, Tecnología de la información, ASP.NET MVC, Lean, Agile
+Work From Home Junior Python Backend Developer / Research + Development|Guayaquil|1|Oracle, Python, Tecnología de la información, Django, Lean, Agile, MySql
+Work From Home Junior Python Backend Developer / Research + Development|Quito|1|Oracle, Python, Tecnología de la información, Django, Lean, Agile, MySql
+Trabajo desde casa Desarrollador Python Backend / Investigación y Desarrollo|Quito|4|Oracle, Python, Tecnología de la información, Django, Lean, Agile, MySql
+Trabajo desde casa Desarrollador Python Backend / Investigación y Desarrollo|Guayaquil|4|Oracle, Python, Tecnología de la información, Django, Lean, Agile, MySql
+Work From Home React Native Developer|Quito|5|CSS, JavaScript, Tecnología de la información, Ruby on Rails, Lean, Agile, HTML 5
+Work From Home React Native Developer|Guayaquil|5|CSS, JavaScript, Tecnología de la información, Ruby on Rails, Lean, Agile, HTML 5
+Programador|Guayaquil|3|No especificado
+Full stack developer|Quito|2|SQL Server, C#, Dot Net, JavaScript, AngularJS, ASP.NET MVC Web API
+Work From Home UX/UI Developer|Guayaquil|5|Tecnología de la información, Prototype, Lean, Agile, Scrum
+Work From Home Vue.js Developer|Quito|5|JavaScript, Python, Tecnología de la información, Lean, Agile
+Work From Home Vue.js Developer|Guayaquil|5|JavaScript, Python, Tecnología de la información, Lean, Agile
 Work From Home C++ Developer|Guayaquil|5|C++, Tecnología de la información, Lean, Agile
-Work From Home C++ Developer|Quito|5|C++, Tecnología de la información, Lean, Agile
-Work From Home Flutter Developer|Guayaquil|5|Dot Net, Java, Tecnología de la información, Node.js, SWIFT, Objective-C, Lean, Agile
-Work From Home .NET Core Developer|Guayaquil|5|SQL Server, C#, CSS, Dot Net, HTML, JavaScript, Tecnología de la información, ASP.NET MVC, Lean, Agile
-Work From Home JavaScript Developer|Guayaquil|5|JavaScript, Tecnología de la información, Lean, Agile
-Work From Home JavaScript Developer|Quito|5|JavaScript, Tecnología de la información, Lean, Agile
 Work From Home Drupal Developer|Guayaquil|5|Tecnología de la información, Lean, Agile
-Work From Home Drupal Developer|Quito|5|Tecnología de la información, Lean, Agile
 Work From Home AngularJS Developer|Guayaquil|5|Mac OS, Windows, SQL Server, CSS, HTML, JavaScript, jQuery, Tecnología de la información, AngularJS, Lean, Agile
-Work From Home AngularJS Developer|Quito|5|Mac OS, Windows, SQL Server, CSS, HTML, JavaScript, jQuery, Tecnología de la información, AngularJS, Lean, Agile
-Work From Home Rust Developer|Quito|6|Tecnología de la información, Lean, Agile
-Work From Home Rust Developer|Guayaquil|6|Tecnología de la información, Lean, Agile
-Work From Home ETL Developer|Quito|5|Tecnología de la información, Lean, Agile
 Work From Home ETL Developer|Guayaquil|5|Tecnología de la información, Lean, Agile
 Work From Home Salesforce Commerce Cloud Developer|Guayaquil|5|Java, PHP, Tecnología de la información, Lean, Agile
-Work From Home Salesforce Commerce Cloud Developer|Quito|5|Java, PHP, Tecnología de la información, Lean, Agile
-Work From Home NetSuite ERP Developer|Quito|5|Tecnología de la información, Lean, Agile
 Work From Home NetSuite ERP Developer|Guayaquil|5|Tecnología de la información, Lean, Agile
-Work From Home MS Dynamics Developer|Guayaquil|5|Tecnología de la información, Lean, Agile, Microsoft Office
-Work From Home MS Dynamics Developer|Quito|5|Tecnología de la información, Lean, Agile, Microsoft Office
-Work From Home Data Analytics Developer|Guayaquil|3|Tecnología de la información, Machine Learning, Lean, Agile
-Work From Home Data Analytics Developer|Quito|3|Tecnología de la información, Machine Learning, Lean, Agile
-Work From Home Next.js Developer|Quito|3|PostgreSQL, JavaScript, Tecnología de la información, Lean, Agile, MySql
 Work From Home Next.js Developer|Guayaquil|3|PostgreSQL, JavaScript, Tecnología de la información, Lean, Agile, MySql
 Work From Home Mobile NativeScript Developer Senior|Guayaquil|5|SQL Server, C#, Java, Tecnología de la información, Objective-C, Lean, Agile
-Work From Home Mobile NativeScript Developer Senior|Quito|5|SQL Server, C#, Java, Tecnología de la información, Objective-C, Lean, Agile
+Work From Home Kafka Developer|Guayaquil|3|Tecnología de la información, Spark, Big Data, Lean, Agile
+Data Engineer|Guayaquil|2|No especificado
+Java developer|Quito|3|No especificado
+Web Developer Jr.|Manta|1|PHP, Python, Servidores Web, Backbone.js, Go, HTML 5
+Senior developer|Guayaquil|4|SQL Server, ASP.Net, Docker
+Remote Java Developer|Tulcán|3|No especificado
 React Native Developer|Quito|4|No especificado
 Cloud Senior Developer|Quito|4|No especificado
-Analista programador|Quito|2|SQL Server, C#, AngularJS, HTML 5
-Desarrollador Sr de Odoo|Guayaquil|2|Oracle, HTML, JavaScript, Python, ERP
 Channel Developer|Quito|2|Comunicación y persuasión, Marketing, Tecnología de la información, Trabajo en equipo, Ventas, Redes Sociales
 Analista programador/a java|Quito|5|No especificado
 Desarrollador Web .Net|Quito|3|No especificado
-Desarrollador programador|Cuenca|1|MongoDB
-Desarrollador Senior|Guayaquil|4|No especificado
-Programador PHP|Quito|3|No especificado
-Analista y desarrollador de software|Quito|3|SQL Server, C#, Python, Resolución de problemas
-Analista y desarrollador de software|Guayaquil|3|SQL Server, C#, Python, Resolución de problemas
-Analista programador|Quito|3|JavaScript, Python, ERP, Aceptación de errores y fracasos, Comunicación y persuasión, Resolución de conflictos, Soporte al cliente, Superación, Tecnología de la información, Testeo, Trabajo en equipo, ISO 9001
-Desarrollador Oracle Apex|Quito|1|No especificado
-Desarrollador de software guayaquil|Guayaquil|2|No especificado
-Desarrollador PHP / C# Senior|Quito|4|SQL Server, C#, PHP, AngularJS
-Programador / Desarrollador de Software|Guayaquil|6|C#, C++, JavaScript, PHP, Python, CakePHP, HTML 5
-Programador júnior|Quito|2|SQL Server, C#, AngularJS, HTML 5
-Desarrollador Programador Quito|Quito|1|No especificado
-Desarrollador Senior|Guayaquil|2|No especificado
-Channel Developer|Quito|2|Comunicación y persuasión, Marketing, Negociación, Trabajo en equipo, Ventas, Redes Sociales
-Work From Home Talent Acquisition Analyst|Guayaquil|2|Reclutamiento, Recursos Humanos, Tecnología de la información, Lean, Agile
-Work From Home Talent Acquisition Analyst|Quito|2|Reclutamiento, Recursos Humanos, Tecnología de la información, Lean, Agile
-Work From Home Product Owner|Quito|2|Desarrollo de producto, Tecnología de la información, Lean, Agile
-Work From Home Product Owner|Guayaquil|2|Desarrollo de producto, Tecnología de la información, Lean, Agile
-Work From Home Data Science / Data Engineer|Guayaquil|5|SQL Server, Python, R, Tecnología de la información, Impala, Apache Hive, Hadoop, Spark, Machine Learning, Lean, Agile
-Work From Home Data Science / Data Engineer|Quito|5|SQL Server, Python, R, Tecnología de la información, Impala, Apache Hive, Hadoop, Spark, Machine Learning, Lean, Agile
+Work From Home Talent Search Specialist Trainee|Guayaquil|1|Reclutamiento, Recursos Humanos, Tecnología de la información, Lean, Agile
+Work From Home Talent Search Specialist Trainee|Quito|1|Reclutamiento, Recursos Humanos, Tecnología de la información, Lean, Agile
 Work From Home Angular Architect|Guayaquil|6|PostgreSQL, CSS, HTML, Java, JavaScript, Tecnología de la información, AngularJS, Lean, Agile
-Work From Home Angular Architect|Quito|6|PostgreSQL, CSS, HTML, Java, JavaScript, Tecnología de la información, AngularJS, Lean, Agile
-Work From Home Angular Tech Lead|Quito|7|PostgreSQL, CSS, HTML, Java, JavaScript, Tecnología de la información, AngularJS, Lean, Agile
-Work From Home Angular Tech Lead|Guayaquil|7|PostgreSQL, CSS, HTML, Java, JavaScript, Tecnología de la información, AngularJS, Lean, Agile
-Work From Home Big Data Senior|Quito|5|Tecnología de la información, ElasticSearch, Hadoop, Spark, Scala, Big Data, Lean, Agile
 Work From Home Big Data Senior|Guayaquil|5|Tecnología de la información, ElasticSearch, Hadoop, Spark, Scala, Big Data, Lean, Agile
-Work From Home Big Data Architect|Guayaquil|6|Tecnología de la información, ElasticSearch, Hadoop, Spark, Scala, Big Data, Lean, Agile
-Work From Home Big Data Architect|Quito|6|Tecnología de la información, ElasticSearch, Hadoop, Spark, Scala, Big Data, Lean, Agile
-Work From Home C++ Architect|Guayaquil|6|C++, Tecnología de la información, Lean, Agile
-Work From Home Big Data Tech Lead|Quito|7|Tecnología de la información, ElasticSearch, Hadoop, Spark, Scala, Big Data, Lean, Agile
-Work From Home C++ Architect|Quito|6|C++, Tecnología de la información, Lean, Agile
-Work From Home Big Data Tech Lead|Guayaquil|7|Tecnología de la información, ElasticSearch, Hadoop, Spark, Scala, Big Data, Lean, Agile
-Work From Home C++ Tech Lead|Quito|7|C++, Tecnología de la información, Lean, Agile
-Work From Home C++ Tech Lead|Guayaquil|7|C++, Tecnología de la información, Lean, Agile
-Work From Home Drupal Architect|Quito|6|Tecnología de la información, Lean, Agile
+Work From Home Big Data Senior|Quito|5|Tecnología de la información, ElasticSearch, Hadoop, Spark, Scala, Big Data, Lean, Agile
 Work From Home Drupal Architect|Guayaquil|6|Tecnología de la información, Lean, Agile
-Work From Home Drupal Tech Lead|Guayaquil|7|Tecnología de la información, Lean, Agile
 Work From Home Drupal Tech Lead|Quito|7|Tecnología de la información, Lean, Agile
+Work From Home WebRTC Tech Lead|Guayaquil|5|Tecnología de la información, Lean, Agile
+Work From Home Product Owner|Guayaquil|2|Desarrollo de producto, Tecnología de la información, Lean, Agile
 Desarrollador Full Stack|Guayaquil|2|No especificado
 Practicante de Programación|Quito|1|SQL Server, Java
-Analista financiero|Quito|3|Microsoft Excel
-Software engineer|Quito|2|No especificado
-Quality assurance engineer|Quito|2|No especificado
-Ingeniero de Datos|Quito|2|No especificado
-Asistente ejecutivo|Quito|1|Microsoft Excel, Microsoft Word, Microsoft Office
-Oportunidad laboral para técnico / asesor|Guayaquil|2|No especificado
+Work From Home Software Development Engineer in Test|Guayaquil|5|Java, JavaScript, Python, Tecnología de la información, Testeo, Lean, Agile, Test-driven development (TDD)
+Work From Home Software Development Engineer in Test|Quito|5|Java, JavaScript, Python, Tecnología de la información, Testeo, Lean, Agile, Test-driven development (TDD)
+Ingeniero de fábrica de Software|Quito|2|Java
+Senior Software engineer|Quito|4|No especificado
