@@ -14,6 +14,7 @@ Ejecutar de manera independiente los programas desarrollados en los archivos con
   <li>Visual Studio Code</li>
   <li>Python</li>
   <li>Jupyter Notebook</li>
+  <li>Rubyinstaller</li>
 </ul>
 
 
