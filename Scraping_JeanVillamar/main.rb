@@ -1,52 +1,34 @@
-require 'open-uri' #consultar a la plataforma
-require 'nokogiri' #formatear, parsear a html
+require 'open-uri' # consultar a la plataforma
+require 'nokogiri' # formatear, parsear a html
+require 'csv'
+require 'date'
 
-$link = 'https://ec.indeed.com/jobs?q=engineer%20software&l=Ecuador&vjk=74e9c3033648168c'
-$datosHTML = URI.open($link)
-$datosStr = $datosHTML.read
-$parsed_content = Nokogiri::HTML($datosStr)
-
-var = 10
-
-
-
-def scrap1()
-    contenido = $parsed_content.css('.cardOutline')
-    contenido.css(".cardOutline").each do |element|  
-        titulo = element.css('.jobTitle').css('.css-jspxzf').inner_text()
-        lugar = element.css('.companyLocation').inner_text()
-        dia =  element.css('.date').inner_text()
-        exper = element.css('.jobsearch').inner_text()
-
-        if titulo.include?("/")
-            puts "TITULO -->"+titulo.split("/")[0]  #id  .clase
-        else
-            puts "TITULO -->"+ titulo
-        end
-        puts "LUGAR-->"+lugar.split(",")[0]
-        puts "DIAS-->"+dia.split(" ")[1]
-        puts "\n"
-          
-    end
-
-    
-def avanzar(number)
-    $link = "/jobs?q=software&l=Ecuador&start="+number.to_s
-    puts $link
-    $datosHTML = URI.open($link)
-    $datosStr = $datosHTML.read
-    $parsed_content = Nokogiri::HTML($datosStr)
-    
-    scrap1()
+# require './prueba'
+#require './ScrapingExpertini' 
+#require './job'
+ require_relative 'ScrapingExpertini'
+ require_relative 'job'
+# require_relative 'prueba'
+# load './ScrapingExpertini.rb' load './job.rb'
+CSV.open('jobs_expertini.csv','wb', col_sep: ';') do |csv|
+  csv << %w[titulo empresa categoria provincia salario tipo dias]
 end
+link = 'https://ec.expertini.com/jobs/search/developer-ecuador/'
+datosHTML = URI.open(link)
+datosStr = datosHTML.read
+parsed_content = Nokogiri::HTML(datosStr)
+contadorpag = 0
+contenido2 = parsed_content.css('.w-pagination')
 
-
-    
+contenido2.css('.page-numbers').each do |_element|
+  contadorpag += 1
 end
+contadorpag -= 2 # se le resta 2 dado que cuenta tambien los botones de siguiente y anterior
 
-i = 0
-while i < 100
-    scrap1()
-    i += 10
-    
- end
+(1..10).each do |i| #(1..contadorpag).each do |i| por alguna razon a partir de la pestaña 11 comienzan a salir cargos que no tienen 
+                    #relacion con developers por ello se tuvo que hacerlo de esta forma
+  link = 'https://ec.expertini.com/jobs/search/developer-ecuador/?No=' + i.to_s
+  
+  objprub = ScrapingExpertini.new
+  objprub.extraerDatosEtiquetas(link)
+end

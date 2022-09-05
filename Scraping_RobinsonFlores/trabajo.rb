@@ -3,6 +3,7 @@ require 'csv' #escribir y leer csv
 class Trabajo
   # accessor get and set method
   attr_accessor :cargo, :ciudad, :empresa, :fechaPublicacion, :jornada, :horario
+  
   def initialize(cargo, ciudad, empresa, fechaPublicacion, jornada, horario)
     @cargo = cargo
     @ciudad = ciudad

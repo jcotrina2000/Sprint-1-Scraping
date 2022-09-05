@@ -11,7 +11,7 @@ scraper = ScraperComputrabajo.new
 caracter = '?p='
 
 CSV.open('cargos.csv','wb', col_sep: '|') do |csv|
-  csv << %w[nombre_cargo ciudad años_experiencia requisitos]
+  csv << %w[cargo ciudad años_experiencia requisitos]
 end
 
 for i in 1..6
