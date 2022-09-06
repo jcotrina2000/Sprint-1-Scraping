@@ -7,10 +7,10 @@ class ScraperComputrabajo
     container = parsed_content.css('div.w100')
     container.css('div.bClick').each do |post|
       ocupacion = post.css('.js-o-link').inner_text
-      provincia_linea = post.css('p.fc_base').inner_text
-      prov = provincia_linea.split(' ')[-2].to_s
-      if prov.include? ","
-        provincia = provincia_linea.split(',')[-1]
+      ciudad_linea = post.css('p.fc_base').inner_text
+      city = ciudad_linea.split(' ')[-2].to_s
+      if city.include? ","
+        ciudad = ciudad_linea.split(',')[-1]
         post.css('.js-o-link').each do |var|
             link = var.attribute('href')
             datosLink = URI.open(url_principal+link, 'User-Agent' => 'firefox')
@@ -25,7 +25,7 @@ class ScraperComputrabajo
             if !requisitos.start_with?('Conocimientos')
               requisitos = 'Conocimientos: No especificado'
             end
-            carr = Ocupacion.new(ocupacion,provincia,years_experience,requisitos.split(':')[1])
+            carr = Ocupacion.new(ocupacion,ciudad,years_experience,requisitos.split(':')[1])
             #carr.toString
             carr.guardar('cargos.csv')  
           end
