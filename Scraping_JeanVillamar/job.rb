@@ -14,7 +14,7 @@ class Job
   end
 
   def guardar
-    CSV.open('Scraping_JeanVillamar/jobs_expertini.csv', 'a', col_sep: ';') do |csv|
+    CSV.open('jobs_expertini.csv', 'a', col_sep: ';') do |csv|
       csv << [@titulo.to_s,@empresa.to_s,@categoria.to_s,@provincia.to_s,@salario.to_s, @tipo.to_s, @dias.to_s] 
     end
   end
