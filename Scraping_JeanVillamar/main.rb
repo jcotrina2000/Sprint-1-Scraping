@@ -10,7 +10,7 @@ require 'date'
  require_relative 'job'
 # require_relative 'prueba'
 # load './ScrapingExpertini.rb' load './job.rb'
-CSV.open('jobs_expertini.csv','wb', col_sep: ';') do |csv|
+CSV.open('Scraping_JeanVillamar/jobs_expertini.csv','wb', col_sep: ';') do |csv|
   csv << %w[titulo empresa categoria provincia salario tipo dias]
 end
 link = 'https://ec.expertini.com/jobs/search/developer-ecuador/'

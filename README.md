@@ -24,3 +24,25 @@ Ejecutar de manera independiente los programas desarrollados en los archivos con
   <li>python -m pip install jupyter</li>
   <li>Restart VSCode</li>
 </ol>
+
+<h3>Librerias usadas en Ruby</h3>
+<ul>
+  <li>plotnine</li>
+  <li>matplotlib</li>
+  <li>pandas</li>
+  <li>numpy</li>
+  <li>norm</li>
+</ul>
+
+<h3>Librerias usadas en Jupyter Notebook</h3>
+<ul>
+  <li>open-uri</li>
+  <li>nokogiri</li>
+  <li>csv</li>
+  <li>date</li>
+</ul>
+
+
+
+
+
