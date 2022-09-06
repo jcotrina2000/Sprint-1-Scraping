@@ -25,7 +25,7 @@ Ejecutar de manera independiente los programas desarrollados en los archivos con
   <li>Restart VSCode</li>
 </ol>
 
-<h3>Librerias usadas en Ruby</h3>
+<h3>Librerias usadas en Jupyter Notebook</h3>
 <ul>
   <li>plotnine</li>
   <li>matplotlib</li>
@@ -34,7 +34,7 @@ Ejecutar de manera independiente los programas desarrollados en los archivos con
   <li>norm</li>
 </ul>
 
-<h3>Librerias usadas en Jupyter Notebook</h3>
+<h3>Librerias usadas en Ruby</h3>
 <ul>
   <li>open-uri</li>
   <li>nokogiri</li>
