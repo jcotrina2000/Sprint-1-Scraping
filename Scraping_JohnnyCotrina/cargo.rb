@@ -13,8 +13,8 @@ class Ocupacion
   end  
   
   def guardar(nombre_archivo)
-    CSV.open(nombre_archivo,'a', col_sep: '|') do |csv|
-      csv << [@nombre_cargo.to_s, @ciudad.to_s.strip, @años_experiencia.to_s, @requisitos.to_s.strip]
+    CSV.open(nombre_archivo,'a', col_sep: '|') do |csvw|
+      csvw << [@nombre_cargo.to_s, @ciudad.to_s.strip, @años_experiencia.to_s, @requisitos.to_s.strip]
     end
-end
+  end 
 end
